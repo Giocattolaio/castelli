@@ -1,0 +1,82 @@
+﻿label{
+    line-height: 30px;
+}
+input[type=search]{
+    height: 25px !important;
+}
+input:focus, textarea:focus, select:focus {
+    background-color: #FFFFCC;
+}
+input:invalid, textarea:invalid, select:invalid {
+    border: #FFAAAA solid 2px;
+}
+nav{
+	float:left;
+	width:100% !important;
+}
+#corpo{
+	margin-top:60px;
+}
+#logo{
+	float:left;	
+}
+#testata{
+	position:fixed;
+	top:0px;
+	width:100%;	
+	z-index:1000;
+}
+#titoloPagina{
+    text-align: center;
+    font-size: 1.2em;
+    border-bottom: solid 1px #e7e7e7;
+    color: #AAA;
+    font-weight: bold;
+}
+.contenitorePagina{
+	width:99%;
+}
+.font-rosso{
+    color: #d9534f;
+}
+.font-verde{
+    color: #5cb85c;
+}
+.footer{
+    background: #E7E7E7;
+    text-align:center;
+    line-height:30px;
+    border: solid 1px #AAA;
+    border-radius: 3px;
+    color: #AAA;
+    position: fixed;
+    bottom: 0px;
+}
+.logoHP{
+    margin: 2px;
+	max-height: 16px;
+}
+.navbar{
+    margin-bottom: 0px !important;
+}
+.row{
+    margin-bottom: 2px !important;
+}
+.tabelleCellaAzioni{
+    cusor:pointer;
+    text-align:center;
+}
+td > .fa{
+    font-size:20px;
+}
+td > a > .fa{
+    cursor: pointer;
+    font-size:20px;
+}
+a{
+    cursor: pointer;
+}
+a:hover{
+    color:#D40127;
+    text-decoration: none;
+}
