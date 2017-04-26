@@ -1,13 +1,37 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head runat="server">
+    <title id="headTitle">{% block title %}Castelli Forni{% endblock %}</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <!-- CSS Terze parti -->
+    {% block css %}
+    {{ include('dependencies/css.html.twig', { }) }}
+    {% endblock %}
+    <!-- JS Terze parti -->
+</head>
+<body>
+<div id="wrapper">
+    <div id="testata">
+        {{ include('dependencies/menu.html.twig', { }) }}
+        {{ include('dependencies/breadcrumbs.html.twig', { }) }}
+    </div>
+    <div id="corpo">
+        {{ include('dependencies/flashMessages.html.twig', { }) }}
+        <form id="form" method="post" action="index.php">
+            <div id="page-wrapper" style="padding: 0">
+                <div class="container-fluid contenitorePagina">
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+{{ include('dependencies/footer.html.twig', { }) }}
+{{ include('dependencies/message.html.twig', { }) }}
+{{ include('dependencies/js.html.twig', { }) }}
+</body>
 </html>
